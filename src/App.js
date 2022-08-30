@@ -9,7 +9,9 @@ function App() {
   const [user] = useAuthState(auth)
   return (
     <>
-      {user ? <Chat/> :<SignIn />}
+      <div className='main-container'>
+        {user ? <Chat/> :<SignIn />}
+      </div>
     </>
   );
 }
