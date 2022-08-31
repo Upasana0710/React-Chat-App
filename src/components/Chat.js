@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { auth, db } from '../firebase'
 import SendMessage from './SendMessage'
-import SignOut from './SignOut'
 import TopBar from './TopBar'
 function Chat() {
     const scroll = useRef()
@@ -12,6 +11,10 @@ function Chat() {
         scroll.current.scrollIntoView({ behavior: 'smooth' })
         })
     }, [])
+    useEffect(() => {
+        // 👇️ scroll to bottom every time messages change
+        scroll.current?.scrollIntoView({behavior: 'smooth'});
+      }, [messages]);
     return (
         <div className='main-container'>
             <div className='chatContainer'>
@@ -25,8 +28,9 @@ function Chat() {
                             </div>
                         </div>
                     ))}
-                    </div>}
+                    
                 <div ref={scroll}></div>
+                    </div>}
                 <SendMessage scroll={scroll} />
             </div>
         </div>
