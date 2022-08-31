@@ -5,9 +5,9 @@ import {Button} from '@material-ui/core'
 function SignOut() {
   return (
     <div style={{
-        display: 'flex', justifyContent: 'center', position: 'fixed', backgroundColor: '#FAFAFA', top: 0, borderBottom: 'solid 1px lightgray'
+        display: 'flex', justifyContent: 'center', backgroundColor: '#128C7E', borderRadius: '12px'
     }}>
-        <Button style={{ padding: '20px', fontSize: '15px', borderRadius: '0', fontWeight: '600' }} onClick={() => auth.signOut()}>Sign Out</Button>
+        <Button style={{ padding: '6px 16px 6px 16px', borderRadius: '0', fontWeight: '600', color: 'white' }} onClick={() => auth.signOut()}>Sign Out</Button>
     </div>
   )
 }

@@ -1,9 +1,9 @@
-import React , {useState}from 'react'
-import {db, auth} from '../firebase'
+import React, { useState } from 'react'
+import { db, auth } from '../firebase'
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import 'firebase/compat/auth';
-import {Input, Button} from '@material-ui/core'
+import { Input, Button } from '@material-ui/core'
 function SendMessage({ scroll }) {
     const [msg, setMsg] = useState('')
 
@@ -24,8 +24,11 @@ function SendMessage({ scroll }) {
         <div>
             <form onSubmit={sendMessage}>
                 <div className="sendMsg">
-                    <Input style={{ width: '78%', fontSize: '15px', fontWeight: '550', marginLeft: '5px', marginBottom: '-3px' }} placeholder='Message...' type="text" value={msg} onChange={e => setMsg(e.target.value)} />
-                    <Button style={{ width: '18%', fontSize: '15px', fontWeight: '550', margin: '4px 5% -13px 5%', maxWidth: '200px'}} type="submit">Send</Button>
+                    <input style={{
+                        width: '78%', fontSize: '15px', fontWeight: '550', marginLeft: '5px', marginRight: '10px', outline: 'none',
+                        border: 'none', background:'transparent', color: 'white'
+                    }} placeholder='Type a message...' type="text" value={msg} onChange={e => setMsg(e.target.value)} />
+                    <Button style={{ width: '12%', fontSize: '14px', fontWeight: '550', maxWidth: '200px', color: 'white', backgroundColor: '#128C7E' }} type="submit">Send</Button>
                 </div>
             </form>
         </div>
