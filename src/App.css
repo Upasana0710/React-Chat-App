@@ -25,9 +25,6 @@ body{
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.chatContainer{
-  width: auto;
-}
 
 img {
   border-radius: 50%;
@@ -114,6 +111,7 @@ p {
 
 .msgs {
   height: 68vh;
+  width: 600px;
   background-color: #181824;
   background: '../public/background.png';
   display: flex;
@@ -132,13 +130,13 @@ p {
 
 
 @media (max-width: 775px) {
-  .msgs{
-    max-width: 500px;
+  .msgs{    
+    width: 600px;
   }
 }
 
 @media (max-width: 500px) {
   .msgs{
-    max-width: 380px;
+    max-width: 400px;
   }
 }
