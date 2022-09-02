@@ -113,7 +113,7 @@ p {
   height: 68vh;
   width: 600px;
   background-color: #181824;
-  background: '../public/background.png';
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./Img/background.png);
   display: flex;
   padding-bottom: 12px;
   padding-top: 12px;
